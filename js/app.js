@@ -27,7 +27,10 @@ document.getElementById('btn-player').addEventListener('click', function () {
     const playerInput = document.getElementById('player-input')
     const playerInputString = playerInput.value
     const playerInputValue = parseFloat(playerInputString)
-
+    if (isNaN(document.getElementById('player-input').value)) {
+        alert('please insert a validation number')
+        return
+    }
     playerInput.value = ''
 
     const playerLength = players.length
@@ -46,18 +49,28 @@ document.getElementById('calculate-total').addEventListener('click', function ()
     const expensesValue = parseFloat(expensesString)
 
 
+
     const managerInput = document.getElementById('manager-input')
     const managerInputString = managerInput.value;
     const managerInputValue = parseFloat(managerInputString)
+    if (isNaN(document.getElementById('manager-input').value)) {
+        alert('please insert a validation number')
+        return
+    }
     managerInput.value = ''
 
     const coachInput = document.getElementById('coach-input')
     const coachInputString = coachInput.value;
     const coachInputValue = parseFloat(coachInputString)
-
+    if (isNaN(document.getElementById('coach-input').value)) {
+        alert('please insert a validation number')
+        return
+    }
     coachInput.value = ''
     const total = expensesValue + managerInputValue + coachInputValue;
 
     const totalArea = document.getElementById('total');
     totalArea.innerText = total;
 })
+
+
