@@ -1,0 +1,31 @@
+.title-color {
+    color: #FF5E19;
+
+}
+
+.cart {
+    border: 1px solid wheat;
+}
+
+
+
+.player-input {
+    width: 30%;
+    margin: 10px;
+}
+
+.per-player,
+.maneger,
+.coach {
+    display: inline;
+}
+
+.maneger-input {
+    width: 30%;
+    margin: 10px;
+}
+
+.coach-input {
+    width: 30%;
+    margin: 10px;
+}
