@@ -1,7 +1,6 @@
 const playerList = document.getElementById('player-list')
 let players = []
 
-
 function addToList(element) {
 
     const playerName = element.parentNode.parentNode.children[1].innerText;
@@ -13,9 +12,47 @@ function addToList(element) {
         li.innerText = playerName
         playerList.appendChild(li)
     }
+    if (players.length > 5) {
+        alert('You already added 5 players')
+    }
 
 }
 
 document.getElementById('btn-player').addEventListener('click', function () {
-    console.log('clicked')
+    const playerInput = document.getElementById('player-input')
+    const playerInputString = playerInput.value
+    const playerInputValue = parseFloat(playerInputString)
+
+    playerInput.value = ''
+
+    const playerLength = players.length
+    const toatlExpense = playerInputValue * playerLength;
+
+    const expenses = document.getElementById('expenses')
+    expenses.innerText = toatlExpense;
+
+
+
+})
+
+document.getElementById('calculate-total').addEventListener('click', function () {
+    const expenses = document.getElementById('expenses');
+    const expensesString = expenses.innerText;
+    const expensesValue = parseFloat(expensesString)
+
+
+    const managerInput = document.getElementById('manager-input')
+    const managerInputString = managerInput.value;
+    const managerInputValue = parseFloat(managerInputString)
+    managerInput.value = ''
+
+    const coachInput = document.getElementById('coach-input')
+    const coachInputString = coachInput.value;
+    const coachInputValue = parseFloat(coachInputString)
+
+    coachInput.value = ''
+    const total = expensesValue + managerInputValue + coachInputValue;
+
+    const totalArea = document.getElementById('total');
+    totalArea.innerText = total;
 })

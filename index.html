@@ -49,7 +49,7 @@
                     </div>
                     <div class="d-flex flex-column justify-content-center align-items-center">
                         <button type="button" class="btn btn-primary px-5 mb-2 select-button"
-                            onclick="addToList(this)">SELECT</button>
+                            onclick="this.disabled=true,addToList(this)">SELECT</button>
                     </div>
 
                 </div>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="d-flex flex-column justify-content-center align-items-center">
                         <button type="button" class="btn btn-primary px-5 mb-2 select-button "
-                            onclick="addToList(this)">SELECT</button>
+                            onclick="this.disabled=true,addToList(this)">SELECT</button>
                     </div>
 
                 </div>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="d-flex flex-column justify-content-center align-items-center">
                         <button type="button" class="btn btn-primary px-5 mb-2 select-button"
-                            onclick="addToList(this)">SELECT</button>
+                            onclick="this.disabled=true,addToList(this)">SELECT</button>
                     </div>
 
                 </div>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="d-flex flex-column justify-content-center align-items-center">
                         <button type="button" class="btn btn-primary px-5 select-button"
-                            onclick="addToList(this)">SELECT</button>
+                            onclick="this.disabled=true,addToList(this)">SELECT</button>
                     </div>
 
                 </div>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="d-flex flex-column justify-content-center align-items-center">
                         <button type="button" class="btn btn-primary px-5 select-button"
-                            onclick="addToList(this)">SELECT</button>
+                            onclick="this.disabled=true,addToList(this)">SELECT</button>
                     </div>
 
                 </div>
@@ -135,7 +135,7 @@
                     </div>
                     <div class="d-flex flex-column justify-content-center align-items-center">
                         <button type="button" class="btn btn-primary px-5 select-button"
-                            onclick="addToList(this)">SELECT</button>
+                            onclick="this.disabled=true,addToList(this)">SELECT</button>
                     </div>
 
                 </div>
@@ -143,26 +143,26 @@
                     <h3 class="text-center">Budget</h3>
                     <div class="per-player d-flex justify-content-center align-items-center">
                         <p class="player-p">Per Player</p>
-                        <input class="player-input" type="text">
+                        <input id="player-input" class="player-input" type="text">
                     </div>
                     <button id="btn-player" type="button" class="btn btn-primary ">CALCULATE</button>
                     <div class="d-flex">
                         <p>Player Expenses:
-                        <p class="px-5">$5000</p>
+                        <p class="px-5">$ <span id="expenses"> 5000</span></p>
                         </p>
                     </div>
                     <div class="maneger d-flex justify-content-center align-items-center">
-                        <p>Maneger</p>
-                        <input class="maneger-input" type="text">
+                        <p>Manager</p>
+                        <input id="manager-input" class="maneger-input" type="text">
                     </div>
                     <div class="coach d-flex justify-content-center align-items-center">
                         <p>Coach</p>
-                        <input class="coach-input " type="text">
+                        <input id="coach-input" class="coach-input " type="text">
                     </div>
-                    <button type="button" class="btn btn-primary ">CALCULATE TOTAL</button>
+                    <button id="calculate-total" type="button" class="btn btn-primary ">CALCULATE TOTAL</button>
                     <div class="d-flex">
                         <p>Total:</p>
-                        <p class="px-5">$1000</p>
+                        <p class="px-5">$<span id="total">1000</span></p>
                     </div>
                 </div>
             </div>
