@@ -1,19 +1,24 @@
 const playerList = document.getElementById('player-list')
 let players = []
 
+
 function addToList(element) {
 
     const playerName = element.parentNode.parentNode.children[1].innerText;
-    players.push(playerName);
+    if (players.length < 5) {
+
+        players.push(playerName);
+    }
+    else {
+        alert('You already added 5 players')
+    }
     playerList.innerHTML = '';
     for (let player of players) {
         const playerName = player
         let li = document.createElement('li')
         li.innerText = playerName
+
         playerList.appendChild(li)
-    }
-    if (players.length > 5) {
-        alert('You already added 5 players')
     }
 
 }
